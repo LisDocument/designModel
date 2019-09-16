@@ -19,9 +19,13 @@ public class Subject {
         return state;
     }
 
+    /**
+     * 通知所有观察者
+     * @param state 观察对象
+     */
     public void setState(int state){
         this.state = state;
-
+        notifyAllObservers();
     }
 
     public void attach(Observer observer){
